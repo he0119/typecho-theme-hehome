@@ -51,7 +51,7 @@
             <?php endif; ?>
             <li><a href="<?php $this->options->feedUrl(); ?>"><?php _e('文章 RSS'); ?></a></li>
             <li><a href="<?php $this->options->commentsFeedUrl(); ?>"><?php _e('评论 RSS'); ?></a></li>
-            <li><a href="http://www.typecho.org">Typecho</a></li>
+            <li><a href="http://iot.hehome.xyz">IOT</a></li>
         </ul>
 	</section>
     <?php endif; ?>
