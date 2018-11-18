@@ -13,6 +13,10 @@
             <?php $this->content(); ?>
         </div>
         <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
+        <p class="post-meta">
+            最后编辑时间:
+            <?php echo date('Y-m-d h:i a', $this->modified + ($this->options->timezone - idate("Z")));?>
+        </p>
     </article>
 
     <?php $this->need('comments.php'); ?>
