@@ -49,9 +49,6 @@
 
 </head>
 <body>
-<!--[if lt IE 8]>
-    <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
-<![endif]-->
 
 <header id="header" class="clearfix">
     <div class="container">
@@ -75,10 +72,10 @@
             </div>
             <div class="col-mb-12">
                 <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a<?php if ($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+                    <a <?php if ($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                     <?php while ($pages->next()): ?>
-                    <a<?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                    <a <?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                     <?php endwhile; ?>
                 </nav>
             </div>
