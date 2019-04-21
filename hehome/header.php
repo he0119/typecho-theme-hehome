@@ -76,7 +76,7 @@
 
                     <?php Typecho_Widget::widget('Widget_Users_Admin')->to($users); ?>
                     <?php while($users->next()): ?>
-                    <a <?php if ($this->is('user', $users->uid())): ?> class="current"<?php endif; ?> href="<?php $users->permalink(); ?>" title="<?php $users->name(); ?>"><?php $users->screenName(); ?></a>
+                    <a <?php if ($this->is('archive', $users->uid)): ?> class="current"<?php endif; ?> href="<?php $users->permalink(); ?>" title="<?php $users->name(); ?>"><?php $users->screenName(); ?></a>
                     <?php endwhile; ?>
 
                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
