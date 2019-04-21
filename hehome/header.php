@@ -72,11 +72,11 @@
             </div>
             <div class="col-mb-12">
                 <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a <?php if ($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+                    <a <?php if ($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>" title="首页"><?php _e('首页'); ?></a>
 
                     <?php Typecho_Widget::widget('Widget_Users_Admin')->to($users); ?>
                     <?php while($users->next()): ?>
-                    <a <?php if ($this->is('archive', $users->uid)): ?> class="current"<?php endif; ?> href="<?php $users->permalink(); ?>" title="<?php $users->name(); ?>"><?php $users->screenName(); ?></a>
+                    <a <?php if ($this->is('archive', $users->uid)): ?> class="current"<?php endif; ?> href="<?php $users->permalink(); ?>" title="<?php $users->screenName(); ?>"><?php $users->screenName(); ?></a>
                     <?php endwhile; ?>
 
                     <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
