@@ -54,4 +54,13 @@
 	</section>
     <?php endif; ?>
 
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowLinks', $this->options->sidebarBlock)): ?>
+	<section class="widget">
+		<h3 class="widget-title"><?php _e('友情链接'); ?></h3>
+        <ul class="widget-list">
+            <?php Links_Plugin::output();?>
+        </ul>
+	</section>
+    <?php endif; ?>
+
 </div><!-- end #sidebar -->
