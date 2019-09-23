@@ -10,7 +10,6 @@
         ), '', ''); ?></h3>
         <?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
-            <?php if (!$this->password || $this->user->hasLogin()): ?>
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     			<h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
     			<ul class="post-meta">
@@ -23,7 +22,6 @@
         			<?php $this->content('- 阅读剩余部分 -'); ?>
                 </div>
     		</article>
-            <?php endif; ?>
     	<?php endwhile; ?>
         <?php else: ?>
             <article class="post">
