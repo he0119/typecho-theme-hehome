@@ -4,8 +4,10 @@
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最新文章'); ?></h3>
         <ul class="widget-list">
-            <?php $this->widget('Widget_Contents_Post_Recent')
-            ->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
+            <?php Filter_Plugin::recentPosts()->to($post); ?>
+            <?php while($post->next()): ?>
+                <li><a href="<?php $post->permalink(); ?>"><?php $post->title(); ?></a></li>
+            <?php endwhile; ?>
         </ul>
     </section>
     <?php endif; ?>
@@ -31,7 +33,7 @@
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最近回复'); ?></h3>
         <ul class="widget-list">
-        <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+        <?php Filter_Plugin::recentComments()->to($comments); ?>
         <?php while($comments->next()): ?>
             <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?></a>: <?php $comments->excerpt(35, '...'); ?></li>
         <?php endwhile; ?>
