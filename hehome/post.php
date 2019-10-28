@@ -22,7 +22,9 @@
         </p>
     </article>
 
-    <?php $this->need('comments.php'); ?>
+    <?php if($this->user->hasLogin()): ?>
+        <?php $this->need('comments.php'); ?>
+    <?php endif; ?>
 
     <ul class="post-near">
         <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
