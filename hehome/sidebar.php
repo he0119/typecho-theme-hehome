@@ -52,7 +52,9 @@
                 <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('退出'); ?></a></li>
             <?php endif; ?>
             <li><a href="<?php $this->options->feedUrl(); ?>"><?php _e('文章 RSS'); ?></a></li>
+            <?php if($this->user->hasLogin()): ?>
             <li><a href="<?php $this->options->commentsFeedUrl(); ?>"><?php _e('评论 RSS'); ?></a></li>
+            <?php endif; ?>
             <li><a href="http://iot.hehome.xyz">IOT</a></li>
         </ul>
 	</section>
