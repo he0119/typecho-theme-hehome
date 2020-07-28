@@ -26,17 +26,6 @@
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 
-    <!-- 百度统计 -->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?55000a3337990788f1576ba2d4d76321";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129303434-1"></script>
     <script>
