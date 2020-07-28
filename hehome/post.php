@@ -17,7 +17,7 @@
         </div>
         <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
         <?php $modifyDate = new Typecho_Date($this->modified); ?>
-        <p class="post-meta"><?php _e('最后编辑时间:'); ?><time datetime="<?php echo $modifyDate->format('c'); ?>" itemprop="dateModified"><?php echo $modifyDate->format($this->options->postDateFormat); ?></time></p>
+        <p class="post-meta"><?php _e('最后编辑时间: '); ?><time datetime="<?php echo $modifyDate->format('c'); ?>" itemprop="dateModified"><?php echo $modifyDate->format($this->options->postDateFormat); ?></time></p>
     </article>
 
     <?php if($this->user->hasLogin()): ?>
