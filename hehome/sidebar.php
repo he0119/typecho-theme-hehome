@@ -55,7 +55,7 @@
             <?php if($this->user->hasLogin()): ?>
             <li><a href="<?php $this->options->commentsFeedUrl(); ?>"><?php _e('评论 RSS'); ?></a></li>
             <?php endif; ?>
-            <li><a href="http://iot.hehome.xyz">IOT</a></li>
+            <li><a href="http://smart.hehome.xyz">智慧家庭</a></li>
         </ul>
 	</section>
     <?php endif; ?>

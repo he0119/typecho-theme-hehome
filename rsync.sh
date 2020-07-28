@@ -1,1 +1,1 @@
-rsync -cr --progress ./hehome/ vps:/home/he0119/nginx/typecho/usr/themes/hehome/
+rsync -cr --progress ./hehome/ hehome:/home/ubuntu/websites/blog/typecho/usr/themes/hehome/
