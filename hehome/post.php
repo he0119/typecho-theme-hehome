@@ -16,10 +16,8 @@
             <?php $this->content(); ?>
         </div>
         <p itemprop="keywords" class="tags"><?php _e('标签: '); ?><?php $this->tags(', ', true, 'none'); ?></p>
-        <p class="post-meta">
-            最后编辑时间:
-            <?php echo date('Y-m-d h:i a', $this->modified + ($this->options->timezone - idate("Z")));?>
-        </p>
+        <?php $modifyDate = new Typecho_Date($this->modified); ?>
+        <p class="post-meta"><?php _e('最后编辑时间:'); ?><time datetime="<?php echo $modifyDate->format('c'); ?>" itemprop="dateModified"><?php echo $modifyDate->format($this->options->postDateFormat); ?></time></p>
     </article>
 
     <?php if($this->user->hasLogin()): ?>
