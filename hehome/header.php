@@ -39,7 +39,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129303434-1"></script>
     <script>
         <?php if($this->user->hasLogin()): ?>
-            document.cookie = 'prevent_ga=1';
+            document.cookie = 'prevent_ga=1;expires=' + new Date(2147483647 * 1000).toUTCString();
         <?php endif; ?>
         var check_cookie = document.cookie.match(/^(.*;)?\s*prevent_ga\s*=\s*[^;]+(.*)?$/);
         if (!check_cookie) {
