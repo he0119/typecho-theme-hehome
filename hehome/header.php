@@ -38,11 +38,17 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129303434-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <?php if($this->user->hasLogin()): ?>
+            document.cookie = 'prevent_ga=1';
+        <?php endif; ?>
+        var check_cookie = document.cookie.match(/^(.*;)?\s*prevent_ga\s*=\s*[^;]+(.*)?$/);
+        if (!check_cookie) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-129303434-1');
+            gtag('config', 'UA-129303434-1');
+        }
     </script>
 
 </head>
