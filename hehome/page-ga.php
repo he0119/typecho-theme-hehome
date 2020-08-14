@@ -18,7 +18,9 @@
             <?php $this->content(); ?>
         </div>
     </article>
-    <?php $this->need('comments.php'); ?>
+    <?php if($this->user->hasLogin()): ?>
+        <?php $this->need('comments.php'); ?>
+    <?php endif; ?>
 </div><!-- end #main-->
 
 <script type="text/javascript">
