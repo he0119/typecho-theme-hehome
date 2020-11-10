@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129303434-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6Q9S9K8RF"></script>
     <script>
         <?php if($this->user->hasLogin()): ?>
             document.cookie = 'prevent_ga=1;expires=' + new Date(2147483647 * 1000).toUTCString();
@@ -47,7 +47,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-129303434-1');
+            gtag('config', 'G-V6Q9S9K8RF');
         }
     </script>
 
