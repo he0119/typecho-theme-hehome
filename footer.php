@@ -11,7 +11,7 @@
     <div class="blog-text-center">
         <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备18034005号-1</a>
         <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011202000228" target="_blank" rel="nofollow noopener">
-            <img src="<?php $this->options->themeUrl(); ?>img/beian.webp" alt="beian" loading="lazy" width="20" height="20"/>
+            <img src="<?php $this->options->themeUrl('img/beian.webp'); ?>" alt="beian" loading="lazy" width="20" height="20"/>
             <span>川公网安备 51011202000228号</span>
         </a>
     </div>
