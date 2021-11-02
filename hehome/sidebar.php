@@ -4,7 +4,12 @@
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最新文章'); ?></h3>
         <ul class="widget-list">
-            <?php Filter_Plugin::recentPosts()->to($post); ?>
+            <?php if (!empty($this->options->filterBlock) && in_array('FilterPosts', $this->options->filterBlock)) {
+                Filter_Plugin::recentPosts()->to($post);
+            } else {
+                $this->widget('Widget_Contents_Post_Recent')->to($post);
+            }
+            ?>
             <?php while($post->next()): ?>
                 <li><a href="<?php $post->permalink(); ?>"><?php $post->title(); ?></a></li>
             <?php endwhile; ?>
@@ -24,7 +29,12 @@
     <section class="widget">
 		<h3 class="widget-title"><?php _e('最近回复'); ?></h3>
         <ul class="widget-list">
-        <?php Filter_Plugin::recentComments()->to($comments); ?>
+        <?php if (!empty($this->options->filterBlock) && in_array('FilterComments', $this->options->filterBlock)) {
+            Filter_Plugin::recentComments()->to($comments);
+        } else {
+            $this->widget('Widget_Comments_Recent')->to($comments);
+        }
+        ?>
         <?php while($comments->next()): ?>
             <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?></a>: <?php $comments->excerpt(35, '...'); ?></li>
         <?php endwhile; ?>
