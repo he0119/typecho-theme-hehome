@@ -53,7 +53,7 @@
 
 </head>
 <body>
-
+<div class="darkmode-layer"></div>
 <header id="header" class="clearfix">
     <div class="container">
         <div class="row">
