@@ -50,6 +50,19 @@
             gtag('config', 'G-V6Q9S9K8RF');
         }
     </script>
+    <!-- 百度统计 https://tongji.baidu.com/ -->
+    <script>
+        var check_cookie = document.cookie.match(/^(.*;)?\s*prevent_ga\s*=\s*[^;]+(.*)?$/);
+        if (!check_cookie) {
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?32cc39068f2a0f5b61e97c2709f64d85";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+        }
+    </script>
 
 </head>
 <body>
