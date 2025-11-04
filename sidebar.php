@@ -60,6 +60,14 @@
             <?php if($this->user->hasLogin()): ?>
 				<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('进入后台'); ?> (<?php $this->user->screenName(); ?>)</a></li>
                 <li><a href="<?php $this->options->logoutUrl(); ?>"><?php _e('退出'); ?></a></li>
+            <?php else: ?>
+                <?php 
+                    $plugin = Helper::options()->plugin('OidcTypecho');
+                    if ($plugin) {
+                        $loginLink = OidcTypecho_Plugin::renderLoginButton();
+                        echo $loginLink;
+                    }
+                ?>
             <?php endif; ?>
                 <li><a href="<?php $this->options->feedUrl(); ?>"><?php _e('文章 RSS'); ?></a></li>
             <?php if($this->user->hasLogin()): ?>
